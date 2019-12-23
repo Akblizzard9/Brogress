@@ -8,15 +8,10 @@ import psycopg2.extras
 
 
 ####BEFORE RUNNING THIS SCRIPT MAKE SURE YOUR DB IS SET UP BY RUNNING 'python manage.py migrate' FROM /brogress_backend####
-
+DATABASE_URL = os.environ['DATABASE_URL']
 
 #establishes connection to our database
-conn=psycopg2.connect(
-    database="brogress",
-    user="",
-    host="localhost",
-    password=""
-)
+conn=psycopg2.connect(DATABASE_URL)
 dict_cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 #Praw is a wrapper for reddit's api, use it, life gets easier, 
