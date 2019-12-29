@@ -16,11 +16,11 @@ dict_cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 #Praw is a wrapper for reddit's api, use it, life gets easier, 
 # these are the credentials, hide them when we push to production
-reddit = praw.Reddit(client_id = 'm36T_2gWeT0aXg', \
-                     client_secret = 'hXYDbKy_8n4SUyYRPTAc4lsdPKA', \
-                     user_agent = 'Comment Extraction by(/u/BrogressCrawler)', \
-                     username = 'BrogressCrawler', \
-                     password = 'gains4dayz' )
+reddit = praw.Reddit(client_id = '', \
+                     client_secret = '', \
+                     user_agent = '', \
+                     username = '', \
+                     password = '' )
 
 #selection of subreddit
 subreddit = reddit.subreddit('brogress')
